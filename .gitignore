@@ -1,2 +1,16 @@
-/node_moodules
-.env
+# Ignore node_modules directory
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore compiled files
+*.class
+*.jar
+
+# Ignore IDE-specific files and directories
+.idea/
+.vscode/
+
+# Ignore specific files
+secret.txt

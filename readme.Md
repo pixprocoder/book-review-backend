@@ -2,3 +2,4 @@
 - Typescript
 - cors
 - dotenv
+- yarn add ts-node-dev --dev

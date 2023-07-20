@@ -1,0 +1,72 @@
+[
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Classic",
+    "publicationDate": "1925",
+    "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftesseraguild.com%2Fwp-content%2Fuploads%2F2018%2F06%2FHobbit.jpg&f=1&nofb=1&ipt=5e760808de7c73d548f5490c0ad6b127464ff63876353c4d1218173711a042a3&ipo=images"
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Fiction",
+    "publicationDate": "1960",
+    "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftesseraguild.com%2Fwp-content%2Fuploads%2F2018%2F06%2FHobbit.jpg&f=1&nofb=1&ipt=5e760808de7c73d548f5490c0ad6b127464ff63876353c4d1218173711a042a3&ipo=images"
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "publicationDate": "1813",
+    "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftesseraguild.com%2Fwp-content%2Fuploads%2F2018%2F06%2FHobbit.jpg&f=1&nofb=1&ipt=5e760808de7c73d548f5490c0ad6b127464ff63876353c4d1218173711a042a3&ipo=images"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "Dystopian",
+    "publicationDate": "1949",
+    "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftesseraguild.com%2Fwp-content%2Fuploads%2F2018%2F06%2FHobbit.jpg&f=1&nofb=1&ipt=5e760808de7c73d548f5490c0ad6b127464ff63876353c4d1218173711a042a3&ipo=images"
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genre": "Coming-of-Age",
+    "publicationDate": "1951",
+    "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftesseraguild.com%2Fwp-content%2Fuploads%2F2018%2F06%2FHobbit.jpg&f=1&nofb=1&ipt=5e760808de7c73d548f5490c0ad6b127464ff63876353c4d1218173711a042a3&ipo=images"
+  },
+  {
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "publicationDate": "1954",
+    "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftesseraguild.com%2Fwp-content%2Fuploads%2F2018%2F06%2FHobbit.jpg&f=1&nofb=1&ipt=5e760808de7c73d548f5490c0ad6b127464ff63876353c4d1218173711a042a3&ipo=images"
+  },
+  {
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "genre": "Fantasy",
+    "publicationDate": "1997",
+    "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftesseraguild.com%2Fwp-content%2Fuploads%2F2018%2F06%2FHobbit.jpg&f=1&nofb=1&ipt=5e760808de7c73d548f5490c0ad6b127464ff63876353c4d1218173711a042a3&ipo=images"
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "publicationDate": "1937",
+    "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftesseraguild.com%2Fwp-content%2Fuploads%2F2018%2F06%2FHobbit.jpg&f=1&nofb=1&ipt=5e760808de7c73d548f5490c0ad6b127464ff63876353c4d1218173711a042a3&ipo=images"
+  },
+  {
+    "title": "The Hunger Games",
+    "author": "Suzanne Collins",
+    "genre": "Science Fiction",
+    "publicationDate": "2008",
+    "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftesseraguild.com%2Fwp-content%2Fuploads%2F2018%2F06%2FHobbit.jpg&f=1&nofb=1&ipt=5e760808de7c73d548f5490c0ad6b127464ff63876353c4d1218173711a042a3&ipo=images"
+  },
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genre": "Dystopian",
+    "publicationDate": "1932",
+    "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftesseraguild.com%2Fwp-content%2Fuploads%2F2018%2F06%2FHobbit.jpg&f=1&nofb=1&ipt=5e760808de7c73d548f5490c0ad6b127464ff63876353c4d1218173711a042a3&ipo=images"
+  }
+]
