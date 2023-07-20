@@ -1,0 +1,4 @@
+- Express
+- Typescript
+- cors
+- dotenv
