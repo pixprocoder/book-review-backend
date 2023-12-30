@@ -1,10 +1,16 @@
 import { Request, Response } from "express";
 import { BooksService } from "./books.service";
+import sendResponse from "../../../shared/sendResponse";
 
 const createBooks = async (req: Request, res: Response) => {
   const result = await BooksService.createBooks(req.body);
 
-  return res.send(result);
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    message: "Book created successfully",
+    data: result,
+  });
 };
 
 export const BooksController = {
