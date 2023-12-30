@@ -18,8 +18,15 @@ const getSingleBook = async (payload: string) => {
   return result;
 };
 
+// delete book
+const deleteBook = async (payload: string) => {
+  const result = await Books.findByIdAndDelete(payload);
+  return result;
+};
+
 export const BooksService = {
   createBooks,
   getAllBook,
   getSingleBook,
+  deleteBook,
 };
