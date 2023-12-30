@@ -1,21 +1,15 @@
-import express, { Express, Request, Response } from "express";
 import cors from "cors";
-import dotenv from "dotenv";
-import data from "../data/data.json";
+import express, { Application } from "express";
+import routes from "./app/routes";
 
-dotenv.config();
+const app: Application = express();
 
-const app: Express = express();
-const port = 5000;
+// Parser and Middlewares
 app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Express + TypeScript Server");
-});
-app.get("/books", (req: Request, res: Response) => {
-  res.send(data);
-});
+// routes
+app.use("/api/v1", routes);
 
-app.listen(port, () => {
-  console.log(`⚡️[server]: Server is running at http://localhost:${port}`);
-});
+export default app;
