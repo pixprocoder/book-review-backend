@@ -13,7 +13,7 @@ const BookSchema = new Schema(
       required: true,
     },
 
-    Genre: {
+    genre: {
       type: String,
       name: String,
       required: true,
