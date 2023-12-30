@@ -23,7 +23,19 @@ const getAllBook = async (req: Request, res: Response) => {
   });
 };
 
+// single book
+const getSingleBook = async (req: Request, res: Response) => {
+  const result = await BooksService.getSingleBook(req.params.id);
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    message: "single book fetched successfully",
+    data: result,
+  });
+};
+
 export const BooksController = {
   createBooks,
   getAllBook,
+  getSingleBook,
 };
