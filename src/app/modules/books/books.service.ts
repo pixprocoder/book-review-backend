@@ -1,8 +1,9 @@
 import { Books } from "./books.model";
 
 const createBooks = async (payload: any) => {
-  // console.log(payload);
+  console.log("service", payload);
   const result = await Books.create(payload);
+
   return result;
 };
 
@@ -21,6 +22,7 @@ const getSingleBook = async (payload: string) => {
 // delete book
 const deleteBook = async (payload: string) => {
   const result = await Books.findByIdAndDelete(payload);
+
   return result;
 };
 

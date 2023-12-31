@@ -3,7 +3,8 @@ import { BooksService } from "./books.service";
 import sendResponse from "../../../shared/sendResponse";
 
 const createBooks = async (req: Request, res: Response) => {
-  const result = await BooksService.createBooks(req.body);
+  const result = await BooksService.createBooks(req.body.formData);
+  console.log(result);
 
   sendResponse(res, {
     statusCode: 200,
