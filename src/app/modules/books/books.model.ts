@@ -18,6 +18,16 @@ const BookSchema = new Schema(
       name: String,
       required: true,
     },
+    publicationDate: {
+      type: String,
+      name: String,
+      required: true,
+    },
+    image: {
+      type: String,
+      name: String,
+      required: true,
+    },
   },
   {
     timestamps: true,
