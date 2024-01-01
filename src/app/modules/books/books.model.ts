@@ -1,5 +1,14 @@
 import { Schema, model } from "mongoose";
 
+const reviewSchema = new Schema({
+  userPhotoURL: { type: String },
+  userName: { type: String },
+  address: { type: String },
+  description: { type: String, required: true },
+  rating: { type: Number, required: true },
+  comment: { type: String, required: true },
+});
+
 const BookSchema = new Schema(
   {
     title: {
@@ -28,6 +37,7 @@ const BookSchema = new Schema(
       name: String,
       required: true,
     },
+    reviews: { type: [reviewSchema], default: [] },
   },
   {
     timestamps: true,
