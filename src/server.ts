@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import config from "./config/index";
 import app from "./app";
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 process.on("uncaughtException", (error) => {
   console.error(error);
