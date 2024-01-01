@@ -1,10 +1,18 @@
 import { Books } from "./books.model";
 
 const createBooks = async (payload: any) => {
-  console.log("service", payload);
-  console.log(payload);
   const result = await Books.create(payload);
 
+  return result;
+};
+
+// Post review
+const postReview = async (id: any, payload: any) => {
+  const result = await Books.findByIdAndUpdate(
+    { _id: id },
+    { $push: { reviews: payload } },
+    { new: true }
+  );
   return result;
 };
 
@@ -32,4 +40,5 @@ export const BooksService = {
   getAllBook,
   getSingleBook,
   deleteBook,
+  postReview,
 };

@@ -3,13 +3,25 @@ import { BooksService } from "./books.service";
 import sendResponse from "../../../shared/sendResponse";
 
 const createBooks = async (req: Request, res: Response) => {
-  console.log(req.body);
   const result = await BooksService.createBooks(req.body.formData);
 
   sendResponse(res, {
     statusCode: 200,
     success: true,
     message: "Book created successfully",
+    data: result,
+  });
+};
+
+// Post review
+const postReview = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const result = await BooksService.postReview(id, req.body);
+
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    message: "Review posted successfully",
     data: result,
   });
 };
@@ -50,4 +62,5 @@ export const BooksController = {
   getAllBook,
   getSingleBook,
   deleteBook,
+  postReview,
 };
