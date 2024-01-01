@@ -4,9 +4,8 @@ const reviewSchema = new Schema({
   userPhotoURL: { type: String },
   userName: { type: String },
   address: { type: String },
-  description: { type: String, required: true },
-  rating: { type: Number, required: true },
-  comment: { type: String, required: true },
+  rating: { type: Number },
+  comment: { type: String },
 });
 
 const BookSchema = new Schema(
