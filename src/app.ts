@@ -11,7 +11,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// routes
+// all routes
 app.use("/api/v1", routes);
 
 export default app;
