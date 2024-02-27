@@ -1,5 +1,6 @@
 - Express
 - Typescript
+- node.js
 - cors
 - dotenv
 - yarn add ts-node-dev --dev
