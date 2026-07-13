@@ -1,0 +1,15 @@
+version: "2"
+sql:
+  - schema: migrations/
+    queries: query/
+    engine: postgresql
+    gen:
+      go:
+        package: db
+        out: internal/repository/db
+        sql_package: pgx/v5
+        overrides:
+          - column: books.publication_date
+            go_type: string
+          - column: books.image_url
+            go_type: string

@@ -1,16 +1,21 @@
-# Ignore node_modules directory
-node_modules/
+# Go
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.test/
 
-# Ignore log files
-*.log
+# Environment
+.env
 
-# Ignore compiled files
-*.class
-*.jar
-
-# Ignore IDE-specific files and directories
+# IDE
 .idea/
 .vscode/
+.DS_Store
 
-# Ignore specific files
-secret.txt
+# Logs
+*.log
