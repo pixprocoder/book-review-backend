@@ -23,7 +23,8 @@ jobs:
             set -e
 
             cd /opt/apps/book-review-backend
-            git pull origin main
+            git fetch origin main
+            git reset --hard origin/main
 
             # Run database migrations
             docker run --rm \
