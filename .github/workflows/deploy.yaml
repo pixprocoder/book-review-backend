@@ -31,7 +31,7 @@ jobs:
 
             # Run database migrations
             docker run --rm \
-              --env-file /opt/apps/book-review/.env \
+              --env-file /opt/apps/book-review-backend/.env \
               book-review-backend:latest \
               /server migrate
 
