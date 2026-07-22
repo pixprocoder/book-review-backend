@@ -26,14 +26,14 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
 
-            # Run database migrations
-            docker run --rm \
-              --env-file .env \
-              book-review-backend:latest \
-              /server migrate
-
             # Build new image
             docker build -t book-review-backend:latest .
+
+            # Run database migrations
+            docker run --rm \
+              --env-file /op/apps/book-review.env \
+              book-review-backend:latest \
+              /server migrate
 
             # Stop and remove old container
             docker stop book-review || true
@@ -44,7 +44,7 @@ jobs:
               --name book-review \
               --restart unless-stopped \
               -p 8080:8080 \
-              --env-file .env \
+              --env-file /opt/apps/book-review-backend.env \
               book-review-backend:latest
 
             # Health check — wait for app to be ready
