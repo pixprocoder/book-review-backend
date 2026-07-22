@@ -1,0 +1,60 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to EC2 via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            set -e
+
+            cd /opt/apps/book-review-backend
+            git pull origin main
+
+            # Run database migrations
+            docker run --rm \
+              --env-file .env \
+              book-review-backend:latest \
+              /server migrate
+
+            # Build new image
+            docker build -t book-review-backend:latest .
+
+            # Stop and remove old container
+            docker stop book-review || true
+            docker rm book-review || true
+
+            # Start new container
+            docker run -d \
+              --name book-review \
+              --restart unless-stopped \
+              -p 8080:8080 \
+              --env-file .env \
+              book-review-backend:latest
+
+            # Health check — wait for app to be ready
+            sleep 3
+            if curl -f http://localhost:8080/health; then
+              echo "✅ Deployment successful"
+            else
+              echo "❌ Health check failed — check logs"
+              docker logs book-review
+              exit 1
+            fi
+
+            # Clean up old images
+            docker image prune -f
